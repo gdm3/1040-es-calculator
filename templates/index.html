@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <title>1040-ES US Tax Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="description" content="A calculator for determining the amount of taxes to pay in the US for filing a 1040-ES form.">
+    <meta name="keywords" content="taxes 1040-ES IRS tax calculator">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Lato&family=Roboto+Mono:wght@600&family=Shantell+Sans:ital,wght@1,500&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2645792617598164"
+     crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script type=text/javascript src="{{
+  url_for('static', filename='js/main.js')
+}}"></script>
+
+    
+    <div class="topnav">
+      <img alt="taxes" id="ham-menu" class="ham-menu" src="{{ url_for('static', filename='img/hamberger.png')}}">
+      
+      <h1 class="logo">1040-ES Calculator</h1>
+  
+      
+  
+    </div>
+    <div class="sidebar" id="sidebar">
+      <a class="sidebar-link" href="/taxes">Calculate</a>
+      <a class="sidebar-link" href="/news">News</a>
+      <a class="sidebar-link" href="/contact">Contact</a>
+      
+    </div>
+    <div id="information-hover" class="informationHover">
+      <p id="text-header" class="text-header">Placeholder</p> 
+      <p id="text-inside"> placeholder</p>
+    </div>
+    <div class="wrap-wrapper-main"
+>
+      <div class="wrap-main">
+        <div class="wrap-inputs">
+          <div class="form-wrapper">
+            <label for="QuartIncome">Quarterly Income</label>
+            <br>
+            <div class="income-textbox">
+              <input id="QuartIncome" name="QuartIncome"
+                      
+                       value="{{ request.form['QuartIncome'] }}"
+                type="number">   
+              </input>
+              <div class="information" id="Information-QuartIncome">
+                &#x1F6C8;
+              </div>
+            </div>
+      
+            <label for="content">Quarterly Deduction</label>
+            <br>
+            <div class="income-textbox">
+              <input id="QuartDeduction" name="QuartDeduction"
+                      
+                       value="{{ request.form['QuartDeduction'] }}" type="number">
+              </input>
+              <div class="information" id="Information-QuartDeduction">
+                &#x1F6C8;
+              </div>
+            </div>
+      
+            <label for="content">Alternative Minimum Tax</label>
+            <br>
+            <div class="income-textbox">
+              <input id="AltMinTax" name="AltMinTax"
+                     
+                       value="{{ request.form['AltMinTax'] }} " type="number">
+              </input>
+              <div class="information" id="Information-AltMinTax">
+                &#x1F6C8;
+              </div>
+            </div>
+            
+            
+            <label for="content">Credits</label>
+            <br>
+            <div class="income-textbox">
+              <input id="Credits" name="Credits"
+                     
+                       value="{{ request.form['Credits'] }}" type="number">
+              </input>
+              <div class="information" id="Information-Credits">
+                &#x1F6C8;
+              </div>
+            </div>
+            
+      
+            <label for="content">Other Taxes</label>
+            <br>
+            <div class="income-textbox">
+              <input id="OthTaxes" name="OthTaxes"
+                       
+                       value="{{ request.form['OthTaxes'] }}" type="number">
+              </input>
+              <div class="information" id="Information-OthTaxes">
+                &#x1F6C8;
+              </div>
+            </div>
+            
+      
+            <label for="content">Income Tax Withheld</label>
+            <br>
+            <div class="income-textbox">
+              <input id="IncTaxWith" name="IncTaxWith"
+                       
+                       value="{{ request.form['IncTaxWith'] }}" type="number">
+              </input>
+              <div class="information" id="Information-IncTaxWith">
+                &#x1F6C8;
+              </div>
+            </div>
+            
+            <button onclick="postAjax()"class="submit-button" >Calculate</button>
+          </div>
+        </div>
+        <div class="wrap-outputs">
+          <p id="temp-output" class="temp-output">Total Taxes: </p>
+          <input id="output" class="output" type="text" READONLY/>
+          <p class="paragraph-header">Dislcaimer:</p>
+          <p class="paragraph">This calculator outputs the amount of money you should withhold for your 1040-ES on a quarterly basis. It only works if you file your taxes as single or married filing seperately and make less than $147,000 per year! Please consult with a tax professional for any other circumstances as your tax scenerio is more complicated.</p>
+          
+          <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20website%20I%20just%20used%20to%20do%20my%20taxes!%20https://1040escalculator.com" class="fa fa-twitter"></a>
+        </div>
+      </div>
+    </div>
+    
+
+  </body>
+</html>

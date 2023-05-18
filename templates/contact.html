@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Contact - 1040-ES Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="description" content="Contact the administrators of this website.">
+    <meta name="keywords" content="taxes 1040-ES IRS tax calculator">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Lato&family=Roboto+Mono:wght@600&family=Shantell+Sans:ital,wght@1,500&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script type=text/javascript src="{{
+  url_for('static', filename='js/main.js')
+}}"></script>
+    
+    <div class="topnav">
+      <img id="ham-menu" class="ham-menu" src="{{ url_for('static', filename='img/hamberger.png')}}">
+      
+      <h1 class="logo">1040-ES Calculator</h1>
+  
+      
+  
+    </div>
+    <div class="sidebar" id="sidebar">
+      <a class="sidebar-link" href="/taxes">Calculate</a>
+      <a class="sidebar-link" href="/news">News</a>
+      <a class="sidebar-link" href="/contact">Contact</a>
+      
+      
+    </div>
+    <div id="information-hover" class="informationHover">
+      <p id="text-header" class="text-header">Placeholder</p> 
+      <p id="text-inside"> placeholder</p>
+    </div>
+    <p class="contact-header">Contact</p>
+    <p class="contact-p">Any questions or concerns? Please email samtino66@gmail.com</p>
+    
+
+  </body>
+</html>
