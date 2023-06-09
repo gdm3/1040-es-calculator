@@ -1,5 +1,5 @@
 #File to calculate the amount of taxes a user pays
-def taxCalc(quartInc, quartDeduc, alternativeMinimTax, taxCredits, otherTaxes, incomeTaxWith):
+def taxCalc(quartInc, quartDeduc, alternativeMinimTax, taxCredits, otherTaxes, incomeTaxWith, status):
   '''
   Explination of function inputs:
     quartInc = Quartely Income
@@ -8,6 +8,7 @@ def taxCalc(quartInc, quartDeduc, alternativeMinimTax, taxCredits, otherTaxes, i
     taxCredits = Tax Credits
     otherTaxes = Other Taxes
     incomeTaxWIth = Withheld Income Tax
+    status = filing status ('married-j', 'maried-s', 'head', or 'single')
   '''
   #Calculate Number of taxes here
   annualIncome = quartInc * 4

@@ -121,8 +121,15 @@
               <div class="information" id="Information-IncTaxWith">
                 &#x1F6C8;
               </div>
-            </div>
-            
+            </div
+            <label for="select-filing">Filing As:</label>
+            <select class="select-filing" id="select-filing" name="select-filing">
+              <option class="filing-value" value="single">Single</option>
+              <option class="filing-value" value="head">Head of Household</option>
+              <option class="filing-value" value="married-s">Married - Filing Separately</option>
+              <option class="filing-value" value="married-j">Married - Filing Jointly</option>
+            </select>
+            <br>
             <button onclick="postAjax()"class="submit-button" >Calculate</button>
           </div>
         </div>

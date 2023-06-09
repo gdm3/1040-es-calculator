@@ -94,7 +94,7 @@ function leaveHover(hovered){
     informationHover = document.getElementById("information-hover")
     informationHover.style.top = -1000 + "px"
     informationHover.style.left = -1000 + "px"
-  }, 200)
+  }, 190)
   
 }
 
@@ -150,6 +150,8 @@ function postAjax(){
   let Credits = document.getElementById("Credits").value  
   let OthTaxes = document.getElementById("OthTaxes").value
   let IncTaxWith = document.getElementById("IncTaxWith").value
+  let filingStatus = document.getElementById("select-filing").value
+  console.log(filingStatus) //single or married
   console.log(QuartIncome, QuartDeduction, AltMinTax, Credits, OthTaxes, IncTaxWith)
   var server_data = [
     {"QuartIncome":QuartIncome},
@@ -158,6 +160,7 @@ function postAjax(){
     {"Credits":Credits},
     {"OthTaxes":OthTaxes},
     {"IncTaxWith":IncTaxWith},
+    {"Status":filingStatus},
   ]
   $.ajax({
     type: "POST",

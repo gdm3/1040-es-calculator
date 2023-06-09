@@ -31,8 +31,9 @@ def index():
     Credits = float(data[3]['Credits'])
     OthTaxes = float(data[4]['OthTaxes'])
     IncTaxWith = float(data[5]['IncTaxWith'])
-    
-    taxesInfo = taxCalc(QuartIncome, QuartDeduction, AltMinTax, Credits, OthTaxes, IncTaxWith)
+    Status = data[6]['Status']
+    print(Status)
+    taxesInfo = taxCalc(QuartIncome, QuartDeduction, AltMinTax, Credits, OthTaxes, IncTaxWith, Status)
     
     results = {'processed': str(taxesInfo)}
     return jsonify(results)
