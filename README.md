@@ -1,6 +1,6 @@
 # 1040-es-calculator
 
 A collaboration between myself and a friend.
-Dependenceis: 
+# Dependenciess: 
 1. Flask
 2. Gevent
