@@ -503,3 +503,12 @@
     margin-left: 164px;
   }
 }
+.a-wrap{
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
